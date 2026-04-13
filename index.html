@@ -20,12 +20,19 @@
     <script src="script.js"></script>
 </head>
 
-<body style="font-family: Inter, sans-serif" class="font-sans bg-gray-700">
+<body style="font-family: Inter, sans-serif" class="font-sans bg-gray-200">
+
+    <!-- Header (jen na menších zařízeních) -->
+
+    <header class="fixed xl:hidden">
+        <div class="h-16 w-16 sm:mt-10 sm:ml-10 max-sm:ml-5 max-sm:mt-5 bg-gray-700">
+        </div>
+    </Header>
 
     <!-- Postranní menu -->
 
-    <aside class="fixed">
-        <div class="mr-3 pt-4 shadow-xl border-r-1 border-gray-400 bg-gray-200 h-screen w-[calc(100vw/6)]">
+    <aside class="fixed max-xl:hidden">
+        <div class="mr-3 pt-4 bg-gray-200 h-screen xl:w-[calc(100vw/5.25)] max-xl:w-80">
             <section class="_menu _menu-html shadow-lg h-auto ml-4 mr-4 rounded-lg bg-white">
 
                     <div class="h-auto bg-red-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex">
@@ -70,20 +77,20 @@
     <!-- Hlavní část -->
 
     <main>
-        <div class="ml-[calc(100vw/5.5)] m-auto border-l border-gray-400 bg-gray-200 h-auto">
+        <div class="xl:ml-[calc(100vw/5.5)] m-auto bg-gray-200 h-auto">
 
             <!-- Nadpis a tlačítka -->
 
-            <section class="p-10 pb-0 h-auto border-gray-400">
-                <h1 class="pt-2 pb-2 underline tracking-tight text-gray-700 font-medium text-6xl">Návod k tvorbě webových stránek</h1>
-                <div class="flex mt-10 tracking-tight text-gray-100 font-medium text-3xl">
-                    <button id="button-html" onclick="showSection('html')" class="tlac tlac-html shadow-lg ml-10 bg-red-600 text-gray-100 rounded-lg hover:border-red-400 hover:text-red-400">
+            <section class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 h-auto border-gray-400">
+                <h1 class="pt-2 pb-2 max-xl:pt-26 underline tracking-tight text-gray-700 font-medium text-6xl">Návod pro tvorbu webových stránek</h1>
+                <div class="flex flex-wrap max-sm:flex-col mt-10 tracking-tight text-gray-100 font-medium text-3xl">
+                    <button id="button-html" onclick="showSection('html')" class="tlac tlac-html shadow-lg bg-red-600 text-gray-100 rounded-lg hover:border-red-400 hover:text-red-400">
                         <h2 class="p-3 pr-6 pl-6">HTML</h2>
                     </button>
-                    <button id="button-css" onclick="showSection('css')" class="tlac tlac-css bg-white shadow-lg ml-10 text-blue-600 rounded-lg hover:border-blue-400 hover:text-blue-400">
+                    <button id="button-css" onclick="showSection('css')" class="tlac tlac-css bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-blue-600 rounded-lg hover:border-blue-400 hover:text-blue-400">
                         <h2 class="p-3 pr-6 pl-6">CSS</h2>
                     </button>
-                    <button id="button-js" onclick="showSection('js')" class="tlac tlac-js bg-white shadow-lg ml-10 text-yellow-600 rounded-lg hover:border-yellow-400 hover:text-yellow-400">
+                    <button id="button-js" onclick="showSection('js')" class="tlac tlac-js bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-yellow-600 rounded-lg hover:border-yellow-400 hover:text-yellow-400">
                         <h2 class="p-3 pr-6 pl-6">JS</h2>
                     </button>
                 </div>
@@ -95,19 +102,19 @@
 
                 <!-- Nadpis Sekce -->
 
-                <div class="h-auto m-10 ml-20 mr-20 shadow-lg rounded-lg bg-red-600 tracking-tight text-gray-100 font-medium text-3xl w-max">
+                <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 shadow-lg rounded-lg bg-red-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
                     <h3 class="p-3 pl-6 pr-6">Základy HTML</h3>
                 </div>
 
                 <!-- Container Sekce -->
                 <!-- U CSS a JS je to stejné (Nechce se mi to psát) -->
                 
-                <div class="shadow-lg h-auto mt-10 ml-20 mr-20 rounded-lg bg-white">
+                <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
                     <div class="h-auto bg-red-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
                         <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
                     </div>
-                    <div class="h-128 grid grid-cols-5">
-                        <div class="col-span-3">
+                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+                        <div class="lg:col-span-3 max-lg:col-span-2">
 
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
@@ -130,17 +137,17 @@
             <section class="section css pb-10 hidden">
 
 
-                <div class="h-auto m-10 ml-20 mr-20 rounded-lg shadow-lg bg-blue-600 tracking-tight text-gray-100 font-medium text-3xl w-max">
+                <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-blue-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
                     <h3 class="p-3 pl-6 pr-6">Základy CSS</h3>
                 </div>
 
 
-                <div class="shadow-lg h-auto mt-10 ml-20 mr-20 rounded-lg bg-white">
+                <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
                     <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
                         <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
                     </div>
-                    <div class="h-128 grid grid-cols-5">
-                        <div class="col-span-3">
+                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+                        <div class="lg:col-span-3 max-lg:col-span-2">
 
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
@@ -165,17 +172,17 @@
             <section class="section js pb-10 hidden">
 
 
-                <div class="h-auto m-10 ml-20 mr-20 rounded-lg shadow-lg bg-yellow-600 tracking-tight text-gray-100 font-medium text-3xl w-max">
+                <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-yellow-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
                     <h3 class="p-3 pl-6 pr-6">Základy JS</h3>
                 </div>
 
 
-                <div class="shadow-lg h-auto mt-10 ml-20 mr-20 rounded-lg bg-white">
+                <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
                     <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
                         <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
                     </div>
-                    <div class="h-128 grid grid-cols-5">
-                        <div class="col-span-3">
+                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+                        <div class="lg:col-span-3 max-lg:col-span-2">
 
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
