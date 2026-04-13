@@ -12,6 +12,9 @@ function showSection(name)
 {
 	document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
     document.querySelector('.' + name).classList.remove('hidden');
+
+	document.querySelectorAll('._menu').forEach(sec => sec.classList.add('hidden'));
+	document.querySelector('._menu-' + name).classList.remove('hidden');
 	
 	document.querySelectorAll('.tlac').forEach(sec => sec.classList.remove('text-gray-100'));
 	document.querySelectorAll('.tlac').forEach(sec => sec.classList.remove('bg-red-600'));
