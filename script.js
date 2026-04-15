@@ -8,6 +8,8 @@ colors.set("html", "red");
 colors.set("css", "blue");
 colors.set("js", "yellow");
 
+var menuOpen = false;
+
 function showSection(name)
 {
 	document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
@@ -29,4 +31,20 @@ function showSection(name)
 	document.querySelector('.tlac-' + name).classList.add('bg-' + colors.get(name) + '-600');
 	document.querySelector('.tlac-' + name).classList.remove('text-' + colors.get(name) + '-600');
 	document.querySelector('.tlac-' + name).classList.add('text-gray-100');
+}
+
+function mobileMenuShow()
+{
+	if (!menuOpen)
+	{
+		document.getElementById('menu-btn').classList.add('hidden');
+		document.getElementById('aside-menu').classList.remove('max-xl:hidden');
+		menuOpen = true;
+	}
+	else
+	{
+		document.getElementById('menu-btn').classList.remove('hidden');
+		document.getElementById('aside-menu').classList.add('max-xl:hidden');
+		menuOpen = false;
+	}
 }

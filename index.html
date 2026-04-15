@@ -22,21 +22,29 @@
 
 <body style="font-family: Inter, sans-serif" class="font-sans bg-gray-200">
 
-    <!-- Header (jen na menších zařízeních) -->
+    <!-- Header (ikonka menu) (jen na menších zařízeních) -->
 
     <header class="fixed xl:hidden">
-        <div class="h-16 w-16 sm:mt-10 sm:ml-10 max-sm:ml-5 max-sm:mt-5 bg-gray-700">
+        <div id="menu-btn" onclick="mobileMenuShow()" class="h-16 w-16 sm:mt-10 sm:ml-10 max-sm:ml-5 max-sm:mt-5 bg-gray-700 hover:bg-gray-600 hover:cursor-pointer">
+            <div class="p-3 grid grid-rows-5">
+                <div class="bg-gray-200 h-2"></div>
+                <div class="h-2"></div>
+                <div class="bg-gray-200 h-2"></div>
+                <div class="h-2"></div>
+                <div class="bg-gray-200 h-2"><div>
+            </div>
         </div>
     </Header>
 
     <!-- Postranní menu -->
 
-    <aside class="fixed max-xl:hidden">
-        <div class="mr-3 pt-4 bg-gray-200 h-screen xl:w-[calc(100vw/5.25)] max-xl:w-80">
+    <aside id="aside-menu" class="fixed max-xl:hidden">
+        <div class="mr-3 pt-4 bg-transparent h-screen xl:w-[calc(100vw/5.25)] max-xl:w-80">
             <section class="_menu _menu-html shadow-lg h-auto ml-4 mr-4 rounded-lg bg-white">
 
-                    <div class="h-auto bg-red-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex">
+                    <div class="h-auto bg-red-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex relative">
                         <h3 class="p-3 pl-6 pr-6">Přehled</h3>
+                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
                     </div>
 
                     <div class="h-[calc(100vh-108px)]">
@@ -48,8 +56,9 @@
 
             <section class="_menu _menu-css shadow-lg h-auto ml-4 mr-4 rounded-lg bg-white hidden">
 
-                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex relative">
                         <h3 class="p-3 pl-6 pr-6">Přehled</h3>
+                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
                     </div>
 
                     <div class="h-[calc(100vh-108px)]">
@@ -61,8 +70,9 @@
 
             <section class="_menu _menu-js shadow-lg h-auto ml-4 mr-4 rounded-lg bg-white hidden">
 
-                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex relative">
                         <h3 class="p-3 pl-6 pr-6">Přehled</h3>
+                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
                     </div>
 
                     <div class="h-[calc(100vh-108px)]">
@@ -84,13 +94,13 @@
             <section class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 h-auto border-gray-400">
                 <h1 class="pt-2 pb-2 max-xl:pt-26 underline tracking-tight text-gray-700 font-medium text-6xl">Návod pro tvorbu webových stránek</h1>
                 <div class="flex flex-wrap max-sm:flex-col mt-10 tracking-tight text-gray-100 font-medium text-3xl">
-                    <button id="button-html" onclick="showSection('html')" class="tlac tlac-html shadow-lg bg-red-600 text-gray-100 rounded-lg hover:border-red-400 hover:text-red-400">
+                    <button id="button-html" onclick="showSection('html')" class="tlac tlac-html shadow-lg bg-red-600 text-gray-100 rounded-lg hover:border-red-400 hover:text-red-400 hover:cursor-pointer">
                         <h2 class="p-3 pr-6 pl-6">HTML</h2>
                     </button>
-                    <button id="button-css" onclick="showSection('css')" class="tlac tlac-css bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-blue-600 rounded-lg hover:border-blue-400 hover:text-blue-400">
+                    <button id="button-css" onclick="showSection('css')" class="tlac tlac-css bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-blue-600 rounded-lg hover:border-blue-400 hover:text-blue-400 hover:cursor-pointer">
                         <h2 class="p-3 pr-6 pl-6">CSS</h2>
                     </button>
-                    <button id="button-js" onclick="showSection('js')" class="tlac tlac-js bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-yellow-600 rounded-lg hover:border-yellow-400 hover:text-yellow-400">
+                    <button id="button-js" onclick="showSection('js')" class="tlac tlac-js bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-yellow-600 rounded-lg hover:border-yellow-400 hover:text-yellow-400 hover:cursor-pointer">
                         <h2 class="p-3 pr-6 pl-6">JS</h2>
                     </button>
                 </div>
@@ -110,22 +120,80 @@
                 <!-- U CSS a JS je to stejné (Nechce se mi to psát) -->
                 
                 <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+
+                    <!-- Nadpis Containeru -->   
+
                     <div class="h-auto bg-red-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
                         <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
                     </div>
+
+                    <!-- Tělo Containeru -->
+
                     <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+
+                        <!-- Místo pro text -->
+
                         <div class="lg:col-span-3 max-lg:col-span-2">
 
                         </div>
+
+                        <!-- Ukázka kódu -->
+
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
                             <div class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
+
+                            <!-- Místo pro text -->
+
                             <div>
                             
                             </div>
                         </div>
                     </div>
+
+                    <!-- Zápatí Containeru -->
+
+                    <div class="h-4 bg-red-600 rounded-b-lg"></div>
+                </div>
+
+                <!-- Další -->
+
+                <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+
+                    <!-- Nadpis Containeru -->   
+
+                    <div class="h-auto bg-red-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
+                    </div>
+
+                    <!-- Tělo Containeru -->
+
+                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+
+                        <!-- Místo pro text -->
+
+                        <div class="lg:col-span-3 max-lg:col-span-2">
+
+                        </div>
+
+                        <!-- Ukázka kódu -->
+
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+
+                            <!-- Místo pro text -->
+
+                            <div>
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zápatí Containeru -->
+
                     <div class="h-4 bg-red-600 rounded-b-lg"></div>
                 </div>
 
@@ -164,6 +232,28 @@
                     </div>
                 </div>
 
+                <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
+                    </div>
+                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+                        <div class="lg:col-span-3 max-lg:col-span-2">
+
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
 
             </section>
 
@@ -176,6 +266,28 @@
                     <h3 class="p-3 pl-6 pr-6">Základy JS</h3>
                 </div>
 
+
+                <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
+                    </div>
+                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+                        <div class="lg:col-span-3 max-lg:col-span-2">
+
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
 
                 <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
                     <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
