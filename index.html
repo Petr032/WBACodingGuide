@@ -39,7 +39,7 @@
     <!-- Postranní menu -->
 
     <aside id="aside-menu" class="fixed max-xl:hidden">
-        <div class="mr-3 pt-4 bg-transparent h-screen xl:w-[calc(100vw/5.25)] max-xl:w-80">
+        <div class="mr-3 pt-4 bg-transparent h-screen w-80">
             <section class="_menu _menu-html shadow-lg h-auto ml-4 mr-4 rounded-lg bg-white">
 
                     <div class="h-auto bg-red-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex relative">
@@ -61,9 +61,11 @@
                         <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
                     </div>
 
-                    <div class="h-[calc(100vh-108px)]">
-
+                    <div class="h-[calc(100vh-108px)] text-gray-700 text-lg font-medium p-4 pl-5">
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2">Úvod</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_01">Jak propojit HTML a CSS</a>
                     </div>
+
                     <div class="h-4 bg-blue-600 rounded-b-lg"></div>
 
             </section>
@@ -87,7 +89,7 @@
     <!-- Hlavní část -->
 
     <main>
-        <div class="xl:ml-[calc(100vw/5.5)] m-auto bg-gray-200 h-auto">
+        <div class="xl:ml-77.5 m-auto bg-gray-200 h-auto">
 
             <!-- Nadpis a tlačítka -->
 
@@ -108,7 +110,7 @@
 
             <!-- HTML -->
 
-            <section class="section html pb-10">
+            <section class="section html">
 
                 <!-- Nadpis Sekce -->
 
@@ -129,11 +131,11 @@
 
                     <!-- Tělo Containeru -->
 
-                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
 
                         <!-- Místo pro text -->
 
-                        <div class="lg:col-span-3 max-lg:col-span-2">
+                        <div class="col-span-2">
 
                         </div>
 
@@ -169,11 +171,11 @@
 
                     <!-- Tělo Containeru -->
 
-                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
 
                         <!-- Místo pro text -->
 
-                        <div class="lg:col-span-3 max-lg:col-span-2">
+                        <div class="col-span-2">
 
                         </div>
 
@@ -202,28 +204,61 @@
 
             <!-- CSS -->
 
-            <section class="section css pb-10 hidden">
+            <section class="section css hidden">
 
 
                 <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-blue-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
-                    <h3 class="p-3 pl-6 pr-6">Základy CSS</h3>
+                    <h3 class="p-3 pl-6 pr-6">Úvod</h3>
                 </div>
 
 
-                <div class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                <div id="css_01" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
                     <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
-                        <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
+                        <h3 class="p-3 pl-6 pr-6">Jak propojit HTML s CSS</h3>
                     </div>
-                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
-                        <div class="lg:col-span-3 max-lg:col-span-2">
-
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p>Jsou tři způsoby, jak propojit CSS s HTML:</p>
+                            <br>
+                            <ol class="ml-4">
+                                <li><strong>1.</strong> Použít externí css soubor a propojit ho pomocí elementu &lt;link&gt; v hlavičce HTML souboru</li>
+                                <li><strong>2.</strong> Použít &lt;style&gt; element v hlavičce html souboru</li>
+                                <li><strong>3.</strong> Použít atribut style v HTML elementu</li>
+                            </ol>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
                             <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
-                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
-                            <div>
-                            
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                            <ol class="m-2">
+                                <li>
+                                    <p><strong>1. Externí:</strong></p>
+                                    <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                        <p>&lt;head&gt;</p>
+                                        <p class="text-blue-700">&lt;link rel="stylesheet" href="mystyle.css"&gt;</p>
+                                        <p>&lt;/head&gt;</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>2. V Hlavičce:</strong></p>
+                                    <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                        <p>&lt;head&gt;</p>
+                                        <p class="text-blue-700">&lt;style&gt;</p>
+                                        <p class="text-blue-700">body {</p>
+                                        <p class="text-blue-700">&nbsp;background-color: blue;</p>
+                                        <p class="text-blue-700">}</p>
+                                        <p class="text-blue-700">&lt;/style&gt;</p>
+                                        <p>&lt;/head&gt;</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>3. V Elementu:</strong></p>
+                                    <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                        <p class="text-blue-700">&lt;p style="color:red;"&gt; Text &lt;/p&gt;</p>
+                                    </div>
+                                </li>
+                            </ol>
                             </div>
                         </div>
                     </div>
@@ -236,8 +271,8 @@
                     <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
                         <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
                     </div>
-                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
-                        <div class="lg:col-span-3 max-lg:col-span-2">
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2">
 
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
@@ -259,7 +294,7 @@
 
             <!-- JS -->
 
-            <section class="section js pb-10 hidden">
+            <section class="section js hidden">
 
 
                 <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-yellow-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
@@ -271,8 +306,8 @@
                     <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
                         <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
                     </div>
-                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
-                        <div class="lg:col-span-3 max-lg:col-span-2">
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2">
 
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
@@ -293,8 +328,8 @@
                     <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
                         <h3 class="p-3 pl-6 pr-6">Placeholder</h3>
                     </div>
-                    <div class="h-128 grid lg:grid-cols-5 md:max-lg:grid-cols-4 max-md:grid-cols-2">
-                        <div class="lg:col-span-3 max-lg:col-span-2">
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2">
 
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
