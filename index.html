@@ -22,9 +22,7 @@
 
 <body style="font-family: Inter, sans-serif" class="font-sans bg-gray-200">
 
-    <!-- Header (ikonka menu) (jen na menších zařízeních) -->
-
-    <header class="fixed xl:hidden">
+    <button class="fixed xl:hidden">
         <div id="menu-btn" onclick="mobileMenuShow()" class="h-16 w-16 sm:mt-10 sm:ml-10 max-sm:ml-5 max-sm:mt-5 bg-gray-700 hover:bg-gray-600 hover:cursor-pointer">
             <div class="p-3 grid grid-rows-5">
                 <div class="bg-gray-200 h-2"></div>
@@ -34,7 +32,7 @@
                 <div class="bg-gray-200 h-2"><div>
             </div>
         </div>
-    </Header>
+    </button>
 
     <!-- Postranní menu -->
 
@@ -69,7 +67,21 @@
                         <br>
                         <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_03">Selektory</a>
                         <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Základní vlastnosti</h4>
-                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_04">Barvy</a>  
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_04">Barvy a Pozadí</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_05">Border</a> 
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_06">Zakulacené rohy</a> 
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_07">Výška a Šířka</a> 
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Text a Fonty</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_08">Texty</a>  
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_09">Fonty</a>
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Box Model</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_10">Box Model</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_11">Margin a Padding</a> 
                     </div>
 
                     <div class="h-4 bg-blue-600 rounded-b-lg"></div>
@@ -92,15 +104,20 @@
         </div>
     </aside>
 
+    <!-- Header -->
+    
+    <header class="xl:ml-77.5 sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0">
+        <h1 class="pt-2 pb-2 max-xl:pt-26 underline tracking-tight text-gray-700 font-medium text-6xl">Návod pro tvorbu webových stránek</h1>
+    </header>
+
     <!-- Hlavní část -->
 
     <main>
         <div class="xl:ml-77.5 m-auto bg-gray-200 h-auto">
 
-            <!-- Nadpis a tlačítka -->
+            <!-- Tlačítka -->
 
-            <section class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 h-auto border-gray-400">
-                <h1 class="pt-2 pb-2 max-xl:pt-26 underline tracking-tight text-gray-700 font-medium text-6xl">Návod pro tvorbu webových stránek</h1>
+            <section class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 sm:pt-0 max-sm:pt-0  h-auto">               
                 <div class="flex flex-wrap max-sm:flex-col mt-10 tracking-tight text-gray-100 font-medium text-3xl">
                     <button id="button-html" onclick="showSection('html')" class="tlac tlac-html shadow-lg bg-red-600 text-gray-100 rounded-lg hover:border-red-400 hover:text-red-400 hover:cursor-pointer">
                         <h2 class="p-3 pr-6 pl-6">HTML</h2>
@@ -325,7 +342,7 @@
                             <p>Níže je seznam několika základních typů:</p>
                             <br>
                             <ul class="ml-8 list-disc">
-                                <li>Element selektor, který vybírá HTML prvky na základě jejich názvu.</li>
+                                <li>Selektor elementu, který vybírá HTML prvky na základě jejich názvu.</li>
                                 <li>ID selektor, který používá atribut id HTML elementu k výběru konkrétního elementu. ID elementu je v rámci stránky jedinečné.</li>
                                 <li>Selektor Třídy vybírá prvky HTML se specifickým atributem třídy.</li>
                                 <li>Univerzální selektor, který vybírá všechny elementy na stránce.</li>
@@ -600,25 +617,44 @@
                     <h3 class="p-3 pl-6 pr-6">Texty a Fonty</h3>
                 </div>
 
-                <!--Texty a Fonty-->
+                <!--Texty-->
 
                 <div id="css_08" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
                     <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
-                        <h3 class="p-3 pl-6 pr-6">Texty a Fonty</h3>
+                        <h3 class="p-3 pl-6 pr-6">Texty</h3>
                     </div>
                     <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
                         <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
-                            <p>CSS selektory se používají k výběru prvků HTML, které chcete stylovat.</p>
-                            <p>Níže je seznam několika základních typů:</p>
+                            <p>U textu můžeme nastavit barvu, zarovnání a dekoraci.</p>
+                            <p>O barvě textu je možné se více dozvědět v sekci barvy.</p>
+                            <p>Možnosti zarovnání textu:</p>
                             <br>
                             <ul class="ml-8 list-disc">
-                                <li>Element selektor, který vybírá HTML prvky na základě jejich názvu.</li>
-                                <li>ID selektor, který používá atribut id HTML elementu k výběru konkrétního elementu. ID elementu je v rámci stránky jedinečné.</li>
-                                <li>Selektor Třídy vybírá prvky HTML se specifickým atributem třídy.</li>
-                                <li>Univerzální selektor, který vybírá všechny elementy na stránce.</li>
+                                <li>left</li>
+                                <li>right</li>
+                                <li>center</li>
+                                <li>justify</li>
                             </ul>
                             <br>
-                            <p>Selektory je také možné seskupovat. Oddělujeme je čárkou.</p>
+                            <p>Při nastavení „justify“ se každý řádek natáhne tak, aby měl stejnou šířku a levý a pravý okraj byly rovné.</p>
+                            <p>Je několik možností dekorace textu:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>overline</li>
+                                <li>line-through</li>
+                                <li>underline</li>
+                            </ul>
+                            <br>
+                            <p>Můžeme také změnit barvu, styl nebo tloušťku dekorace.</p>
+                            <p>Styly dekorace:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>solid</li>
+                                <li>double</li>
+                                <li>dotted</li>
+                                <li>dashed</li>
+                                <li>wavy</li>
+                            </ul>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
                             <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
@@ -627,34 +663,186 @@
                             <div class="text-gray-700 text-xl font-medium m-4">
                             <ul class="m-2">
                                 <li>
-                                    <p><strong>Dle Elementu:</strong></p>
+                                    <p><strong>Zarovnání textu:</strong></p>
                                     <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                        <p class="text-blue-700">názevElementu {}</p>
+                                        <p style="text-align:left" class="text-blue-700">text-align:left</p>
+                                        <p style="text-align:right" class="text-blue-700">text-align:right</p>
+                                        <p style="text-align:center" class="text-blue-700">text-align:center</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <p><strong>Dle ID:</strong></p>
+                                    <p><strong>Dekorace textu:</strong></p>
                                     <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                        <p class="text-blue-700">#názevID {}</p>
+                                        <p style="text-decoration-line:overline" class="text-blue-700">text-decoration-line:overline</p>
+                                        <p style="text-decoration-line:line-through" class="text-blue-700">text-decoration-line:line-through</p>
+                                        <p style="text-decoration-line:underline" class="text-blue-700">text-decoration-line:underline</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <p><strong>Dle Třídy:</strong></p>
+                                    <p><strong>Vlastnosti dekorace textu:</strong></p>
                                     <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                        <p class="text-blue-700">.názevTřídy {}</p>
+                                        <p style="text-decoration-line:underline;text-decoration-color:black" class="text-blue-700">text-decoration-color:black</p>
+                                        <p style="text-decoration-line:underline;text-decoration-style:wavy" class="text-blue-700">text-decoration-style:wavy</p>
+                                        <p style="text-decoration-line:underline;text-decoration-thickness:5px" class="text-blue-700">text-decoration-thickness:5px</p>
+                                    </div>
+                                </li>
+                               
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <!--Fonty-->
+
+                <div id="css_09" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Fonty</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>V CSS můžeme také nastavit vlastní písmo.</p>
+                            <br>
+                            <p>Je možné nastavit několik písem jako „záložní“ systém. Pokud prohlížeč nepodporuje první písmo, zkusí použít další. Názvy písem by měly být odděleny čárkou.</p>
+                            <br>
+                            <p>Dále lze u písem nastavit jejich velikost a také styl <strong>(normal,italic,...)</strong></p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                            <ul class="m-2">
+                                <li>
+                                    <p><strong>Nastavení písma:</strong></p>
+                                    <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                        <p class="text-blue-700">font-family: "Times New Roman", Times, serif</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <p><strong>Univerzální:</strong></p>
-                                    <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                        <p class="text-blue-700">* {}</p>
+                                    <p><strong>Styl písma:</strong></p>
+                                    <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg italic">
+                                        <p class="text-blue-700">font-style: italic</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <br>
-                                    <p><strong>Seskupené selektory</strong></p>
+                                    <p><strong>Velikost písma:</strong></p>
                                     <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                        <p class="text-blue-700">selektor1, selektor2, selektor3, ... {}</p>
+                                        <p class="text-blue-700">font-size: 16px</p>
+                                    </div>
+                                </li>                                
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-blue-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
+                    <h3 class="p-3 pl-6 pr-6">Box Model</h3>
+                </div>
+
+                <!--Box Model-->
+
+                <div id="css_10" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Box Model</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>V CSS se termín „box model“ používá, když se mluví o webdesignu a rozvržení.</p>
+                            <p>Skládá se ze čtyř částí (od nejvnitřnější k nejvnější):</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>Content - Obsah (Obrázky, text, atd.)</li>
+                                <li>Padding - Prázdná oblast mezi obsahem a ohraničením (Border)</li>
+                                <li>Border - Ohraničení obsahu a paddingu</li>
+                                <li>Margin - Prázdná oblast okolo ohraničení.</li>
+                            </ul>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+
+                                <div class="bg-blue-600 p-8 text-center">
+                                    <div class="p-8 bg-blue-500 text-center">
+                                        <div class="p-8 bg-blue-400 text-center">
+                                            <div class="p-4 bg-white text-center">
+                                            <p>Content,
+                                            <span class="text-blue-400"> Padding</span>,
+                                            <span class="text-blue-500"> Border</span>,
+                                            <span class="text-blue-600"> Margin</span>
+                                            </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <!--Margin a Padding-->
+
+                <div id="css_11" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Margin a Padding</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Margin se používá k vytvoření prostoru kolem prvků. Definují vzdálenost mezi okrajem elementu a okolními elementy.</p>
+                            <br>
+                            <p>Padding se používá k vytvoření prostoru kolem obsahu elementu, uvnitř definovaných okrajů.</p>
+                            <br>
+                            <p>Margin a Padding je také možné nastavit na jednotlivé strany:</p>
+                            <ul class="ml-8 list-disc">
+                                <li>margin/padding-top</li>
+                                <li>margin/padding-left</li>
+                                <li>margin/padding-right</li>
+                                <li>margin/padding-bottom</li>
+                            </ul>
+                            <br>
+                            <p>Nebo pomocí čtyř hodnot. <strong>(top,right,bottom,left)</strong></p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                            <ul class="m-2">
+                                <li>
+                                    <p><strong>Margin:</strong></p>
+                                    <div class="m-1 p-1 font-mono">
+                                        <div class="border-gray-700 border border-dashed">
+                                            <p class="text-blue-700 border-gray-700 border m-5 p-2">margin:20px</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>Padding:</strong></p>
+                                    <div class="m-1 p-1 font-mono">
+                                        <div class="">
+                                            <p class="text-blue-700 border-gray-700 border p-5">padding:20px</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p><strong>Specifické nastavení:</strong></p>
+                                    <div class="m-1 p-1 font-mono">
+                                        <div class="border-gray-700 border border-dashed">
+                                            <p class="text-blue-700 border-gray-700 border mt-3 mr-1 mb-0.5 ml-1 p-2">margin:12px 4px 2px 4px</p>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -667,7 +855,7 @@
                 </div>
 
                 
-
+                <!--Zbývá - Position, Postition offset, z-index, display, flex, grid-->
 
             </section>
 
