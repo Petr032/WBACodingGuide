@@ -105,6 +105,7 @@
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_cykly">Cyklus (for)</a>
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_funkce">Funkce</a>
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_arrow-funkce">Arrow funkce</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_array">Pole</a>
                     </div>
 
                     <div class="h-4 bg-yellow-600 rounded-b-lg"></div>
@@ -884,7 +885,7 @@
                     </div>
                     <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
                         <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
-                            <p>Propojit Javascript s HTML lze dvěma způsoby:</p>
+                            <p>Asociovat Javascript s HTML lze dvěma způsoby:</p>
                             <br>
                             <ol class="ml-4">
                                 <li><strong>1.</strong> Propojit pomocí &lt;script&gt; tagu odkaz na externí JavaScript soubor v hlavičce HTML souboru</li>
@@ -901,17 +902,19 @@
                                         <p><strong>1. Externí soubor:</strong></p>
                                         <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
                                             <p>&lt;head&gt;</p>
-                                            <p>&lt;script src="script.js"&gt;&lt;/script&gt;</p>
+                                            <p>&lt;script src=&#8203;"script.js"&gt;&lt;/script&gt;</p>
                                             <p>&lt;/head&gt;</p>
                                         </div>
                                     </li>
                                     <br />
                                     <li>
-                                        <p><strong>2. JavaScript integrovaný do HTML:</strong></p>
+                                        <p><strong>2. JavaScript integrovaný v HTML:</strong></p>
                                         <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
                                             <p>&lt;body&gt;</p>
                                             <p class="text-green-600">&lt;--! HTML kód --&gt;</p>
-                                            <p>&lt;script src="script.js"&gt;&lt;/script&gt;</p>
+                                            <p>&lt;script&gt;</p>
+                                            <p class="text-green-600">&nbsp;&lt;--! Javascript kód --&gt;</p>
+                                            <p>&lt;/script&gt;</p>
                                             <p>&lt;/body&gt;</p>
                                         </div>
                                     </li>
@@ -934,9 +937,14 @@
                     </div>
                     <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
                         <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
-                            <p>Proměnné slouží k <strong>ukládání dat</strong> pod vlastními názvy, se kterými potom můžeš v programu pracovat (např. text, čísla, seznamy). V JavaScriptu existují dva základní druhy proměnných: let a const.</p>
-                            <br /><p>U proměnné <strong>let</strong> se hodnota může měnit.</p>
-                            <br /><p>U proměnné <strong>const</strong> se hodnota po jejím deklarování změnit nemůže.</p>
+                            <p>Proměnné slouží k <strong>ukládání dat</strong> pod vlastními názvy, se kterými lze potom v programu dále pracovat (např. text, čísla, seznamy). V JavaScriptu existují dva základní druhy proměnných: let a const.</p>
+                            <br />
+                            <ol class="ml-8 list-disc">
+                                <li><p>u proměnné <strong>let</strong> se hodnota může měnit.</p></li>
+                                <li><p>u proměnné <strong>const</strong> se hodnota po jejím deklarování změnit nemůže.</p></li>
+                            </ol>
+                            <br />
+                            <p>Po klíčových slovech <em>let</em> nebo <em>const</em> následuje název proměnné jakýkoli si zvolíte, znaménko '=' a hodnotu kterou jí chcete přiřadit. Středníkem (;) vždy zakončujeme příkaz.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
                             <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
@@ -947,8 +955,8 @@
                                     <li>
                                         <p><strong>1. Proměnná let:</strong></p>
                                         <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                            <p>let jmeno = "Jan"</p>
-                                            <p>jmeno = "Petr"</p>
+                                            <p>let jmeno = "Jan";</p>
+                                            <p>jmeno = "Petr";</p>
                                         </div>
                                     </li>
                                     <br />
@@ -974,17 +982,30 @@
                     </div>
                     <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
                         <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
-                            <p>Console.log() je funkce, která <strong>vypisuje hodnoty</strong> do vývojářské konzole v prohlížeči.</p>
-                            <p>Používá se hlavně při učení a ladění kódu – můžeš si ověřit, co se děje v programu.</p>
+                            <p>Console.log() je funkce, která <strong>vypisuje hodnoty</strong> do vývojářské konzole v prohlížeči. Používá se hlavně při učení a ladění kódu – můžete si tak ověřit, co se děje v programu.</p>
+                            <p>Mezi závorky vždy vložíme název proměnné či jakoukoli jinou hodnotu kterou chceme vypsat.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
                             <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
-                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                    <p>console.log("Ukázkový text");</p>
-                                </div>
+                                <ol class="m-2">
+                                    <li>
+                                        <p><strong>1. Vypsání vlastní hodnoty</strong></p>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p>console.log(&#8203;"Ukázkový text");</p>
+                                        </div>
+                                    </li>
+                                    <br />
+                                    <li>
+                                        <p><strong>2. Vypsání hodnoty z proměnné</strong></p>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p>const vesnice = "Brno";</p>
+                                            <p>console.log(vesnice);</p>
+                                        </div>
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -1001,6 +1022,8 @@
                         <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
                             <p>Podmínky umožňují <strong>spouštět různé části kódu</strong> podle toho, jestli je nějaká podmínka splněná.</p>
                             <p>Používají se všude tam, kde program musí „rozhodovat“, např. kontrola věku, přihlášení...</p>
+                            <br />
+                            <p>Po slovu <em>if</em> následuje v závorkách podmínka a v hranatých závorkách kód který se spustí pokud je podmínka platná. Pro více podmínek se používá (ale není povinný) příkaz <em>else if</em> a <em>else</em> pokud žádná z podmínek nemá být pravdivá.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
                             <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
@@ -1010,10 +1033,11 @@
                                 <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
                                     <p>let vek = 18;</p>
                                     <p>if (vek => 18) {</p>
-                                    <p>&nbsp;console.log("Přístup povolen");</p>
-                                    <p>}</p>
-                                    <p>else {</p>
-                                    <p>&nbsp;console.log("Nejsi plnoletý, přístup odepřen");</p>
+                                    <p>&nbsp;console.log(&#8203;"Přístup povolen");</p>
+                                    <p>} else if (vek > 120) {</p>
+                                    <p>&nbsp;console.log(&#8203;"Zadejte platný věk");</p>
+                                    <p>} else {</p>
+                                    <p>&nbsp;console.log(&#8203;"Nejsi plnoletý, přístup odepřen");</p>
                                     <p>}</p>
                                 </div>
                             </div>
@@ -1040,7 +1064,7 @@
                             <div class="text-gray-700 text-xl font-medium m-4">
                                 <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
                                     <p>for (let i = 0; i < 3; i++) {</p>
-                                    <p>&nbsp;console.log("Opakování: ", i);</p>
+                                    <p>&nbsp;console.log(&#8203;"Opakování: ", i);</p>
                                     <p>}</p>
                                 </div>
                             </div>
@@ -1067,7 +1091,7 @@
                             <div class="text-gray-700 text-xl font-medium m-4">
                                 <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
                                     <p>function pozdrav(jmeno) {</p>
-                                    <p>&nbsp;console.log("Ahoj " + jmeno);</p>
+                                    <p>&nbsp;console.log(&#8203;"Ahoj " + jmeno);</p>
                                     <p>}</p>
                                     <p>pozdrav("Jan");</p>
                                 </div>
@@ -1095,7 +1119,34 @@
                             <div class="text-gray-700 text-xl font-medium m-4">
                                 <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
                                     <p>const pozdrav = (jmeno) => {</p>
-                                    <p>&nbsp;console.log("Ahoj " + jmeno);</p>
+                                    <p>&nbsp;console.log(&#8203;"Ahoj " + jmeno);</p>
+                                    <p>};</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="js_array" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Pole</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p>Pole (angl. "array") je <strong>seznam hodnot</strong> uložených v jedné proměnné.</p>
+                            <p>Používá se pro práci s více daty, např. seznam uživatelů, produktů...</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                    <p>let ovoce = ["jablko", "banán", "pomeranč"];</p>
+                                    <p>&nbsp;console.log(&#8203;"Ahoj " + jmeno);</p>
                                     <p>};</p>
                                 </div>
                             </div>
