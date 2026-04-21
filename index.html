@@ -106,6 +106,10 @@
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_funkce">Funkce</a>
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_arrow-funkce">Arrow funkce</a>
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_array">Pole</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_object">Objekt</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_querySelector">document.querySelector()</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_textContent">textContent</a>
+
                     </div>
 
                     <div class="h-4 bg-yellow-600 rounded-b-lg"></div>
@@ -1146,8 +1150,88 @@
                             <div class="text-gray-700 text-xl font-medium m-4">
                                 <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
                                     <p>let ovoce = ["jablko", "banán", "pomeranč"];</p>
-                                    <p>&nbsp;console.log(&#8203;"Ahoj " + jmeno);</p>
+                                    <p>&nbsp;console.log(&#8203;ovoce[1]);</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="js_object" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Objekt</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p>Objekty ukládají data ve formě <strong>klíč-hodnota</strong>, přičemž jeden objekt může mít libovolný počet vlastností.</p>
+                            <p>Používají se tedy pro reprezentaci složitějších dat (např. uživatel s více vlastnostmi).</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                    <p>let uzivatel = {</p>
+                                    <p>&nbsp;jmeno: "Tomáš",</p>
+                                    <p>&nbsp;vek: 25</p>
                                     <p>};</p>
+                                    <br />
+                                    <p>console.log(&#8203;uzivatel.vek);</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="js_querySelector" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">document.querySelector()</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p>document.querySelector() <strong>vybírá první HTML element</strong>, který odpovídá zadanému CSS selektoru.</p>
+                            <p>Používají se pro propojení Javascriptu s HTML (tzv. práce s DOM).</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                    <p>let nadpis = document.querySelector("h1");</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="js_textContent" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">textContent</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p>Vlastnost, která nastavuje nebo čte text uvnitř elementu.</p>
+                            <p>Používá se pro dynamickou změnu textu na stránce.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                    <p>let p = document.querySelector("p");</p>
+                                    <p>p.textContent = "Nový text";</p>
                                 </div>
                             </div>
                         </div>
