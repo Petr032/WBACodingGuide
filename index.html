@@ -108,7 +108,11 @@
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_array">Pole</a>
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_object">Objekt</a>
                         <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_querySelector">document.querySelector()</a>
-                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_textContent">textContent</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_textContent">TextContent</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_style">Style</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_add-event-listener">addEventListener()</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_set-timeout">setTimeout()</a>
+                        <a class="pl-3 pb-2 block hover:cursor-pointer hover:text-gray-500" href="#js_set-interval">setInterval()</a>
 
                     </div>
 
@@ -1094,7 +1098,7 @@
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
                                 <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                    <p>function pozdrav(jmeno) {</p>
+                                    <p>function pozdrav(&#8203;jmeno) {</p>
                                     <p>&nbsp;console.log(&#8203;"Ahoj " + jmeno);</p>
                                     <p>}</p>
                                     <p>pozdrav("Jan");</p>
@@ -1205,7 +1209,7 @@
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
                                 <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                    <p>let nadpis = document.querySelector("h1");</p>
+                                    <p>let nadpis = document.qu&#8203;erySelec&#8203;tor("h1");</p>
                                 </div>
                             </div>
                         </div>
@@ -1221,7 +1225,7 @@
                     </div>
                     <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
                         <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
-                            <p>Vlastnost, která nastavuje nebo čte text uvnitř elementu.</p>
+                            <p>Vlastnost, která nastavuje nebo <strong>čte text</strong> uvnitř elementu.</p>
                             <p>Používá se pro dynamickou změnu textu na stránce.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2">
@@ -1230,8 +1234,116 @@
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
                                 <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
-                                    <p>let p = document.querySelector("p");</p>
-                                    <p>p.textContent = "Nový text";</p>
+                                    <p>let p = document.qu&#8203;erySelec&#8203;tor("p");</p>
+                                    <p>p.textCo&#8203;ntent = "Nový text";</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="js_style" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Style</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p>Umožňuje <strong>měnit vlastnosti</strong> elementu přímo pomocí Javascriptu.</p>
+                            <p>Používá se pro dynamické změny vzhledu (např. po kliknutí).</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                    <p>let div = document.que&#8203;rySelector(&#8203;"div");</p>
+                                    <p>div.style&#8203;.backgroun&#8203;dColor = "blue";</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="js_add-event-listener" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">addEventListener</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p><strong>Naslouchá událostem</strong> (např. kliknutí, stisk klávesy) a spustí vybranou funkci</p>
+                            <p>Používá se pro vytváření dynamických prvků.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                    <p>let button = document.qu&#8203;erySelect&#8203;or("button");</p>
+                                    <p>button.add&#8203;EventListe&#8203;ner("click", () => {</p>
+                                    <p>&nbsp;console.log(&#8203;"Klik!");</p>
+                                    <p>});</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="js_set-timeout" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">setTimeout()</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p>Spustí funkci <strong>po určitém čase</strong> (v milisekundách);</p>
+                            <p>Používá se pro zpožděné akce, např. notifikace.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                    <p>setTimeout(() => {</p>
+                                    <p>&nbsp;console.log(&#8203;"Hotovo");</p>
+                                    <p>}, 2000);</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-yellow-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="js_set-interval" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">setInterval</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">
+                            <p>Funkce, která se opakuje v <strong>pravidelných intervalech</strong>.</p>
+                            <p>Používá se pro časovače nebo opakované akce.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                    <p>setInterval(() => {</p>
+                                    <p>&nbsp;console.log(&#8203;"Běží...");</p>
+                                    <p>}, 1000);</p>
                                 </div>
                             </div>
                         </div>
