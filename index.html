@@ -59,7 +59,7 @@
                         <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
                     </div>
 
-                    <div class="h-[calc(100vh-108px)] text-gray-700 text-lg font-medium p-4 pl-5">
+                    <div class="h-[calc(100vh-108px)] text-gray-700 text-lg font-medium p-4 pl-5 overflow-y-scroll">
                         <h4 class="text-xl text-blue-700 font-semibold pb-2">Úvod</h4>
                         <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_01">Jak propojit HTML a CSS</a>
                         <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Syntax a Selektory</h4>
@@ -82,6 +82,21 @@
                         <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_10">Box Model</a>
                         <br>
                         <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_11">Margin a Padding</a> 
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Position</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_12">Static</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_13">Relative</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_14">Fixed</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_15">Absolute</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_16">Sticky</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_17">Position Offsets</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_18">Z-index</a>
+                        <br>
                     </div>
 
                     <div class="h-4 bg-blue-600 rounded-b-lg"></div>
@@ -771,10 +786,10 @@
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
 
-                                <div class="bg-blue-600 p-8 text-center">
-                                    <div class="p-8 bg-blue-500 text-center">
-                                        <div class="p-8 bg-blue-400 text-center">
-                                            <div class="p-4 bg-white text-center">
+                                <div class="bg-blue-600 lg:p-8 max-lg:p-4 text-center">
+                                    <div class="lg:p-8 max-lg:p-4 bg-blue-500 text-center">
+                                        <div class="lg:p-8 max-lg:p-4 bg-blue-400 text-center">
+                                            <div class="p-4 max-lg:p-4 bg-white text-center">
                                             <p>Content,
                                             <span class="text-blue-400"> Padding</span>,
                                             <span class="text-blue-500"> Border</span>,
@@ -801,9 +816,9 @@
                     </div>
                     <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
                         <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
-                            <p>Margin se používá k vytvoření prostoru kolem prvků. Definují vzdálenost mezi okrajem elementu a okolními elementy.</p>
+                            <p><strong>Margin</strong> se používá k vytvoření prostoru kolem prvků. Definují vzdálenost mezi okrajem elementu a okolními elementy.</p>
                             <br>
-                            <p>Padding se používá k vytvoření prostoru kolem obsahu elementu, uvnitř definovaných okrajů.</p>
+                            <p><strong>Padding</strong> se používá k vytvoření prostoru kolem obsahu elementu, uvnitř definovaných okrajů.</p>
                             <br>
                             <p>Margin a Padding je také možné nastavit na jednotlivé strany:</p>
                             <ul class="ml-8 list-disc">
@@ -854,7 +869,287 @@
                     </div>
                 </div>
 
+                <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-blue-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
+                    <h3 class="p-3 pl-6 pr-6">Position</h3>
+                </div>
+
+                <div id="css_12" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Static</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Výchozí nastavení pozice.</p>
+                            <br>
+                            <p>Staticky umístěné prvky nejsou ovlivněny vlastnostmi top, bottom, left a right.</p>
+                            <br>
+                            <p>Prvky se statickou pozicí jsou umístěny dle normálního toku stránky.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                            <ul class="m-2">
+                                <li>
+                                    <div class="m-1 p-1 font-mono">
+                                        <div class="">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <br>
+                                            <div>
+                                                <p class="text-blue-700 border-gray-700 border">position: static</p>
+                                            </div>
+                                            <br>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+                                </li>                               
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
                 
+                <div id="css_13" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Relative</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Prvek je umístěn vzhledem ke své normální pozici v dokumentu.</p>
+                            <br>
+                            <p>Nastavení vlastností top, right, bottom a left způsobí, že se prvek posune mimo svou normální polohu.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                            <ul class="m-2">
+                                <li>
+                                    <div class="m-1 p-1 font-mono">
+                                        <div class="">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <br>
+                                            <p style="position: relative; left: 30px;" class="text-blue-700 border-gray-700 border">position: relative; left: 30px;</p>
+                                            <br>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                </li>  
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_14" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Fixed</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Prvek je umístěn relativně vzhledem k zobrazovacímu oknu, což znamená, že vždy zůstává na stejném místě, i když je stránka posunuta.</p>
+                            <br>
+                            <p>Vlastnosti top, right, bottom a left se používají k nastavení konečné polohy elementu.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                            <ul class="m-2">
+                                <li>
+                                <p>Použitím css kódu níže docílíte elementu, který se bude držet v pravém dolním rohu stránky.</p>
+                                    <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                        <p class="text-blue-700">position: fixed;bottom: 0;right: 0;width: 100px; border: 2px solid black;</p>
+                                    </div>
+                                </li>  
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_15" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Absolute</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Prvek je umístěn vzhledem k nejbližšímu umístěnému předkovi s jinou pozicí než static.</p>
+                            <br>
+                            <p>Pokud ale element s absolutní pozicií nemá žádné předky, použije tělo dokumentu a pohybuje se spolu s posouváním stránky.</p>
+                            <br>
+                            <p><strong>Pozor:</strong> Prvky s absolutní polohou se mohou překrývat s jinými prvky.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2">
+                                    <li>
+                                        <div class="w-48 relative h-48 border border-gray-700 border-dashed border m-1">
+                                            <p class="font-bold m-2">relative</p>
+                                            <div class="w-28 absolute h-28 bg-blue-700 right-4 bottom-4">
+                                                <p class="text-gray-200 font-bold m-2 text-center">absolute</p>
+                                            </div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>Kód relative:</strong></p>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p class="text-blue-700">position: relative;width: 192px;height: 192px;border: 3px solid black;</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>Kód absolute:</strong></p>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p class="text-blue-700">position: absolute;width: 112px;height: 112px;right: 4;bottom: 4;background-color: blue;color: white;</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_16" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Sticky</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Prvek se přepíná mezi pozicí relative a fixed v závislosti na pozici.</p>
+                            <br>
+                            <p>Sticky element je umístěn relativně, dokud není dosaženo určité pozice posunu. Poté se na tomto místě "zasekne" a funguje jako fixed.</p>
+                            <br>
+                            <p><strong>Pozor:</strong> Aby umístění fungovalo, musíte zadat alespoň jednu z vlastností top, right, bottom nebo left</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2">
+                                    <li>
+                                        <div class="relative h-48 border border-gray-700 border m-1 overflow-scroll">
+                                            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo.</p>
+                                            <div class="bg-blue-600 text-gray-200 sticky top-0">
+                                                <p>position: sticky;</p>
+                                            </div>                                           
+                                            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.</p>
+                                            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.</p>
+                                            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.</p>
+                                        </div>
+                                    </li>  
+                                    <li>
+                                        <p><strong>Kód:</strong></p>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p class="text-blue-700">position: sticky;top: 0;background-color: blue;color: white;</p>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_17" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Position Offsets</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Patří sem vlastnosti top, right, bottom, a left, které odsadí prvek o zadanou vzdálenost od určitého kraje elementu.</p>
+                            <br>
+                            <p>Tyto vlastnosti fungují pouze na prvcích s position nastaveným na relative, absolute, fixed nebo sticky.</p>
+                        </div> 
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2">
+                                    <li>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p class="text-blue-700">top 0;</p>
+                                            <p class="text-blue-700">left: 5;</p>
+                                            <p class="text-blue-700">right 10;</p>
+                                            <p class="text-blue-700">bottom: 0;</p>
+                                        </div>
+                                    </li>  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_18" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Z-index</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Určuje, který prvek by měl být umístěn před nebo za ostatními prvky.</p>
+                            <br>
+                            <p>Prvek může mít kladný nebo záporný z-index.</p>
+                            <br>
+                            <p><strong>Pozor:</strong> funguje pouze na pozicovaných prvcích a položkách flex boxu.</p>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2"> 
+                                    <li class="relative">
+                                        <p><strong>Bez z-indexu:</strong></p>
+                                        <div class="w-48 relative h-12 bg-blue-500 text-gray-200 m-1 mb-10">
+                                            <p class="font-bold p-2"></p>                                      
+                                        </div>
+                                        <div class="w-32 absolute h-12 bg-blue-700 left-4 top-16 pt-4">
+                                                <p class="text-gray-200 font-bold m-1 text-center"></p>
+                                        </div>
+                                    </li>  
+                                    <li class="relative">
+                                        <p><strong>S z-index:</strong></p>
+                                        <div class="w-48 relative h-12 bg-blue-500 text-gray-200 m-1 mb-14 z-2">
+                                            <p class="font-bold p-2">z-index: 2;</p>                                           
+                                        </div>
+                                        <div class="w-32 absolute h-12 bg-blue-700 left-4 top-16 pt-4 z-1">
+                                            <p class="text-gray-200 font-bold m-1 text-center">z-index: 1;</p>
+                                        </div>
+                                    </li>  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
                 <!--Zbývá - Position, Postition offset, z-index, display, flex, grid-->
 
             </section>
@@ -918,8 +1213,10 @@
 
             <!-- Zápatí (Nedodělané) -->
 
-            <footer class="">
-            
+            <footer class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 sm:pt-0 max-sm:pt-0 shadow-lg">
+                <div class="bg-white text-xl font-medium text-gray-700 rounded-t-lg h-64 p-8">
+                    <p>© 2026 David Bartoš, Petr Bláha, Jakub Gutten, Vašek Hála</p>
+                </div>
             </footer>
         </div>
     </main>
