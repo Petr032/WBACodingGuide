@@ -22,7 +22,7 @@
 
 <body style="font-family: Inter, sans-serif" class="font-sans bg-gray-200">
 
-    <button class="fixed xl:hidden">
+    <button class="fixed xl:hidden z-100">
         <div id="menu-btn" onclick="mobileMenuShow()" class="h-16 w-16 sm:mt-10 sm:ml-10 max-sm:ml-5 max-sm:mt-5 bg-gray-700 hover:bg-gray-600 hover:cursor-pointer">
             <div class="p-3 grid grid-rows-5">
                 <div class="bg-gray-200 h-2"></div>
@@ -1046,7 +1046,7 @@
                             <div class="text-gray-700 text-xl font-medium m-4">
                                 <ul class="m-2">
                                     <li>
-                                        <div class="relative h-48 border border-gray-700 border m-1 overflow-scroll">
+                                        <div class="relative h-48 border border-gray-700 m-1 overflow-scroll">
                                             <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo.</p>
                                             <div class="bg-blue-600 text-gray-200 sticky top-0">
                                                 <p>position: sticky;</p>
@@ -1125,7 +1125,7 @@
                                 <ul class="m-2"> 
                                     <li class="relative">
                                         <p><strong>Bez z-indexu:</strong></p>
-                                        <div class="w-48 relative h-12 bg-blue-500 text-gray-200 m-1 mb-10">
+                                        <div class="w-40 relative h-12 bg-blue-500 text-gray-200 m-1 mb-10">
                                             <p class="font-bold p-2"></p>                                      
                                         </div>
                                         <div class="w-32 absolute h-12 bg-blue-700 left-4 top-16 pt-4">
@@ -1134,7 +1134,7 @@
                                     </li>  
                                     <li class="relative">
                                         <p><strong>S z-index:</strong></p>
-                                        <div class="w-48 relative h-12 bg-blue-500 text-gray-200 m-1 mb-14 z-2">
+                                        <div class="w-40 relative h-12 bg-blue-500 text-gray-200 m-1 mb-14 z-2">
                                             <p class="font-bold p-2">z-index: 2;</p>                                           
                                         </div>
                                         <div class="w-32 absolute h-12 bg-blue-700 left-4 top-16 pt-4 z-1">
@@ -1148,6 +1148,500 @@
                     <div class="h-4 bg-blue-600 rounded-b-lg">
 
                     </div>
+                </div>
+
+                <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-blue-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
+                    <h3 class="p-3 pl-6 pr-6">Display</h3>
+                </div>
+
+                <div id="css_19" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Display</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Důležitá vlastnost pro řízení rozvržení. Určuje, zda se s HTML elementem zachází jako s blokovým nebo inline elementem.</p>
+                            <br>
+                            <p>Každý element HTML má výchozí zobrazovanou hodnotu v závislosti na typu elementu. Pro většinu elementů je to block nebo inline.</p>
+                            <br>
+                            <p><strong>Blokové elementy:</strong></p>
+                            <br>
+                            <p>Blokový element pokaždé začíná na novém řádku a zabírá celou dostupnou šířku.</p>
+                            <p>Příklady:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>&lt;div&gt;</li>
+                                <li>&lt;section&gt;</li>
+                                <li>&lt;header&gt;</li>
+                                <li>&lt;footer&gt;</li>
+                                <li>&lt;p&gt;</li>
+                                <li>A další ...</li>
+                            </ul>
+                            <br>
+                            <p><strong>Inline elementy:</strong></p>
+                            <br>
+                            <p>Inline element nezačíná na novém řádku a zabírá pouze tolik šířky, kolik je potřeba.</p>
+                            <p>Příklady:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>&lt;span&gt;</li>
+                                <li>&lt;a&gt;</li>
+                                <li>A další ...</li>
+                            </ul>
+                            <br>
+                            <p><strong>Hodnoty vlastonsti display:</strong></p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li><strong>block</strong> - začíná na novém řádku a zabírá celou dostupnou šířku</li>
+                                <li><strong>inline</strong> - nezačíná na novém řádku a zabírá pouze tolik šířky, kolik je potřeba</li>
+                                <li><strong>inline-block</strong> - něco mezi inline a block. Element je formátovaný jako inline, ale lze u něj použít výšku, šířku, pading a margin.</li>
+                                <li><strong>flex</strong> - více v sekci flexbox</li>
+                                <li><strong>grid</strong> - více v sekci grid</li>
+                                <li><strong>none</strong> - element je úplně skryt a nezabítá žádné místo</li>
+                            </ul>
+                        </div>
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2">
+                                    <li>
+                                        <p><strong>Block:</strong></p>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p class="text-blue-700">display: block;width: 192px; padding: 16px;border: 2px solid blue;</p>
+                                        </div>
+                                        <div class="m-1 p-1 font-mono border border-gray-700 rounded-lg">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <span class="block w-40 p-4 border-2 border-blue-700">eiusmod</span> <span class="block w-40 p-4 border-2 border-blue-700">tempor</span> incidunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                        
+                                    </li>
+                                    <li>
+                                        <p><strong>Inline:</strong></p>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p class="text-blue-700">display: inline; padding: 16px;border: 2px solid blue;</p>
+                                        </div>
+                                        <div class="m-1 p-1 font-mono border border-gray-700 rounded-lg">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <span class="inline p-4 border-2 border-blue-700">eiusmod</span> <span class="inline p-4 border-2 border-blue-700">tempor</span> incidunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                        
+                                    </li>
+                                    <li>
+                                        <p><strong>Inline-Block:</strong></p>
+                                        <div class="m-1 p-1 border border-gray-700 font-mono rounded-lg">
+                                            <p class="text-blue-700">display: inline-block;width: 192px; padding: 16px;border: 2px solid blue;</p>
+                                        </div>
+                                        <div class="m-1 p-1 font-mono border border-gray-700 rounded-lg">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed <span class="inline-block md:w-40 max-md:w-30 p-4 border-2 border-blue-700">eiusmod</span> <span class="inline-block md:w-40 max-md:w-30 p-4 border-2 border-blue-700">tempor</span> incidunt ut labore et dolore magna aliqua.</p>
+                                        </div>                                    
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-blue-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
+                    <h3 class="p-3 pl-6 pr-6">Flexbox</h3>
+                </div>
+
+                <div id="css_20" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Flexbox</h3>
+                    </div>
+                    <div class="h-auto">
+                        <div class="text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Flexbox je model rozvržení pro uspořádání položek horizontálně nebo vertikálně v kontejneru flexibilním a responzivním způsobem.</p>
+                            <br>
+                            <p>Flexbox se používá pro jednorozměrné rozvržení s řádky nebo sloupci.</p>
+                        </div>                      
+                    </div>
+
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_21" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Flex Container</h3>
+                    </div>
+                    <div class="h-auto">
+                        <div class="text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Nadřazený element (kontejner), kde je vlastnost display nastavena na flex nebo inline-flex.</p>
+                            <br>
+                            <p>Vlastnosti Flex Containeru:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li><strong>display</strong> - musí být nastaven na flex nebo inline-flex</li>
+                                <li><strong>flex-direction</strong> - nastavuje směr položek flexboxu</li>
+                                <li><strong>flex-wrap</strong> - určuje, zda se mají položky flexboxu zalamovat, či nikoli</li>                               
+                                <li><strong>justify-content</strong> - zarovná položky flexboxu, pokud nevyužívají veškerý dostupný prostor na vodorovné ose</li>
+                                <li><strong>align-items</strong> - zarovná položky flexboxu, pokud nevyužívají veškerý dostupný prostor na vertikální ose</li>                      
+                            </ul>
+                        </div>                      
+                    </div>
+
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_22" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Flex Direction a Wrap</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Flex Direction určuje směr zobrazení položek flexboxu.</p>
+                            <br>
+                            <p>Hodnoty:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>row</li>
+                                <li>column</li>
+                                <li>row-reverse</li>                               
+                                <li>column-reverse</li>
+                            </ul>
+                            <br>
+                            <p>Flex Wrap určuje, zda se mají položky flexboxu zalamovat či nikoli, pokud pro ně není dostatek místa.</p>
+                            <br>
+                            <p>Hodnoty:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>nowrap</li>
+                                <li>wrap</li>
+                                <li>wrap-reverse</li>                               
+                            </ul>
+                        </div> 
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2">
+                                    <li>
+                                        <p><strong>flex-direction: row</strong></p>
+                                        <div class="bg-blue-600 flex flex-row p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>flex-direction: column</strong></p>
+                                        <div class="bg-blue-600 flex flex-col p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>flex-direction: row-reverse</strong></p>
+                                        <div class="bg-blue-600 flex flex-row-reverse p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>flex-direction: column-reverse</strong></p>
+                                        <div class="bg-blue-600 flex flex-col-reverse p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p><strong>flex-wrap: nowrap</strong></p>
+                                        <div class="bg-blue-600 flex flex-nowrap overflow-hidden p-1">
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">3</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">4</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">5</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">6</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">7</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">8</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">9</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>flex-wrap: wrap</strong></p>
+                                        <div class="bg-blue-600 flex flex-wrap p-1">
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">3</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">4</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">5</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">6</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">7</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">8</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">9</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>flex-wrap: wrap-reverse</strong></p>
+                                        <div class="bg-blue-600 flex flex-wrap-reverse p-1">
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">3</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">4</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">5</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">6</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">7</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">8</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 text-center">9</div>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>                
+
+                <div id="css_23" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Flex Justify Content</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Justify Content zarovná položky flexboxu, pokud nevyužívají veškerý dostupný prostor na vodorovné ose.</p>
+                            <br>
+                            <p>Hodnoty:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>center</li>
+                                <li>flex-start</li>
+                                <li>flex-end</li>          
+                                <li>space-around</li>
+                                <li>space-between</li>
+                                <li>space-evenly</li>   
+                            </ul>
+                        </div> 
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2">
+                                    <li>
+                                        <p><strong>justify-content: center</strong></p>
+                                        <div class="bg-blue-600 justify-center flex p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>justify-content: flex-start</strong></p>
+                                        <div class="bg-blue-600 flex justify-start p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>justify-content: flex-end</strong></p>
+                                        <div class="bg-blue-600 flex justify-end p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>justify-content: space-around</strong></p>
+                                        <div class="bg-blue-600 flex justify-around p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li>  
+                                    <li>
+                                        <p><strong>justify-content: space-between</strong></p>
+                                        <div class="bg-blue-600 flex justify-between p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>justify-content: space-evenly</strong></p>
+                                        <div class="bg-blue-600 flex justify-evenly p-1">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li>  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_24" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Flex Align</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Align Items zarovná položky flexboxu, pokud nevyužívají veškerý dostupný prostor na vertikální ose.</p>
+                            <br>
+                            <p>Hodnoty:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>normal</li>
+                                <li>stretch</li>
+                                <li>center</li>
+                                <li>flex-start</li>
+                                <li>flex-end</li>
+                                <li>baseline</li>
+                            </ul>
+                        </div> 
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2">
+                                    <li>
+                                        <p><strong>align-items: center</strong></p>
+                                        <div class="bg-blue-600 items-center flex p-1 h-20">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>align-items: flex-start</strong></p>
+                                        <div class="bg-blue-600 items-start flex p-1 h-20">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>align-items: flex-end</strong></p>
+                                        <div class="bg-blue-600 items-end flex p-1 h-20">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>align-items: stretch</strong></p>
+                                        <div class="bg-blue-600 items-stretch flex p-1 h-20">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">3</div>
+                                        </div>
+                                    </li>  
+                                    <li>
+                                        <p><strong>align-items: baseline</strong></p>
+                                        <div class="bg-blue-600 items-baseline flex p-1 h-20">
+                                            <div class="bg-gray-200 m-1 w-8 p-3 text-center">1</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">2</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-2 text-center">3</div>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div id="css_25" class="shadow-lg h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg bg-white">
+                    <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100">
+                        <h3 class="p-3 pl-6 pr-6">Flex Items</h3>
+                    </div>
+                    <div class="h-auto grid md:grid-cols-4 max-md:grid-cols-2">
+                        <div class="col-span-2 text-gray-700 text-xl font-medium md:m-8 max-md:m-6">                        
+                            <p>Podřazené prvky flexboxu.</p>
+                            <br>
+                            <p>Vlastnosti:</p>
+                            <br>
+                            <ul class="ml-8 list-disc">
+                                <li>order - určuje pořadí zobrazení položek flexboxu uvnitř flexibilního kontejneru</li>
+                                <li>flex-grow - určuje, o kolik se položka flexboxu zvětší vzhledem k ostatním flexibilním položkám</li>
+                                <li>flex-shrink - určuje, o kolik se položka flexboxu zmenší vzhledem k ostatním flexibilním položkám</li>
+                                <li>flex-basis - určuje počáteční délku položky flexboxu</li>
+                                <li>align-self - určuje zarovnání pro položku flexboxu uvnitř flex kontejneru</li>
+                            </ul>
+                        </div> 
+                        <div class="m-4 rounded-lg shadow-lg col-span-2">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
+                            </div>
+                            <div class="text-gray-700 text-xl font-medium m-4">
+                                <ul class="m-2">
+                                    <li>
+                                        <p><strong>Order</strong></p>
+                                        <div class="bg-blue-600 flex flex-wrap p-1">
+                                            <div class="bg-gray-200 m-1 w-24 p-1 text-center">order: 1</div>
+                                            <div class="bg-gray-200 m-1 w-24 p-1 text-center">order: 2</div>
+                                            <div class="bg-gray-200 m-1 w-24 p-1 text-center">order: 3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>Flex Grow</strong></p>
+                                        <div class="bg-blue-600 flex p-1 overflow-x-auto">
+                                            <div class="bg-gray-200 m-1 w-16 p-1 grow-1 text-center">flex-grow: 1</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 grow-1 text-center">flex-grow: 1</div>
+                                            <div class="bg-gray-200 m-1 w-16 p-1 grow-3 text-center">flex-grow: 3</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>Flex Shrink</strong></p>
+                                        <div class="bg-blue-600 flex p-1 overflow-x-auto">
+                                            <div class="bg-gray-200 m-1 w-64 p-1 shrink-1 text-center">flex-shrink: 1</div>
+                                            <div class="bg-gray-200 m-1 w-64 p-1 shrink-3 text-center">flex-shrink: 3</div>
+                                            <div class="bg-gray-200 m-1 w-64 p-1 shrink-1 text-center">flex-shrink: 1</div>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <p><strong>Flex Basis</strong></p>
+                                        <div class="bg-blue-600 flex-wrap flex p-1 overflow-x-auto">
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">X</div>
+                                            <div class="bg-gray-200 m-1 w-8 basis-64 p-1 text-center">flex-basis: 256px</div>
+                                            <div class="bg-gray-200 m-1 w-8 p-1 text-center">X</div>
+                                        </div>
+                                    </li>  
+                                    <li>
+                                        <p><strong>Align Self</strong></p>
+                                        <div class="bg-blue-600 items-stretch flex p-1 h-40 overflow-x-auto">
+                                            <div class="bg-gray-200 m-1 p-1 self-center text-center">align-self: center</div>
+                                            <div class="bg-gray-200 m-1 p-1 self-end text-center">align-self: flex-end</div>
+                                            <div class="bg-gray-200 m-1 p-1 self-start text-center">align-self: flex-start</div>
+                                            <div class="bg-gray-200 m-1 p-1 text-center">X</div>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-4 bg-blue-600 rounded-b-lg">
+
+                    </div>
+                </div>
+
+                <div class="h-auto m-10 max-sm:ml-5 max-sm:mr-5 rounded-lg shadow-lg bg-blue-600 tracking-tight text-gray-100 font-medium text-3xl sm:w-max">
+                    <h3 class="p-3 pl-6 pr-6">Grid</h3>
                 </div>
 
                 <!--Zbývá - Position, Postition offset, z-index, display, flex, grid-->
@@ -1213,8 +1707,8 @@
 
             <!-- Zápatí (Nedodělané) -->
 
-            <footer class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 sm:pt-0 max-sm:pt-0 shadow-lg">
-                <div class="bg-white text-xl font-medium text-gray-700 rounded-t-lg h-64 p-8">
+            <footer class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 sm:pt-0 max-sm:pt-0">
+                <div class="text-xl font-medium text-gray-700 h-64">
                     <p>© 2026 David Bartoš, Petr Bláha, Jakub Gutten, Vašek Hála</p>
                 </div>
             </footer>
