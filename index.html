@@ -36,7 +36,7 @@
 
     <!-- Postranní menu -->
 
-    <aside id="aside-menu" class="fixed max-xl:hidden">
+    <aside id="aside-menu" class="fixed max-xl:hidden z-90">
         <div class="mr-3 pt-4 bg-transparent h-screen w-80">
             <section class="_menu _menu-html shadow-lg h-auto ml-4 mr-4 rounded-lg bg-white">
 
@@ -96,7 +96,38 @@
                         <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_17">Position Offsets</a>
                         <br>
                         <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_18">Z-index</a>
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Display</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_19">Display</a>
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Flexbox</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_20">Flexbox</a>
                         <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_21">Flex Container</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_22">Flex Direction a Wrap</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_23">Flex Justify Content</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_24">Flex Align</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_25">Flex Items</a>
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Grid</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_26">Grid</a>
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Grid Container</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_27">Grid Container</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_28">Řádky a sloupce</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_29">Mezery</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_30">Align</a>
+                        <h4 class="text-xl text-blue-700 font-semibold pb-2 pt-2">Grid Items</h4>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_31">Grid Items</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_32">Rozpětí / Velikost</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_33">Align</a>
+                        <br>
+                        <a class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#css_34">Order</a>
                     </div>
 
                     <div class="h-4 bg-blue-600 rounded-b-lg"></div>
@@ -1125,10 +1156,10 @@
                                 <ul class="m-2"> 
                                     <li class="relative">
                                         <p><strong>Bez z-indexu:</strong></p>
-                                        <div class="w-40 relative h-12 bg-blue-500 text-gray-200 m-1 mb-10">
+                                        <div class="w-40 relative h-12 bg-blue-500 text-gray-200 m-1 mb-10 z-2">
                                             <p class="font-bold p-2"></p>                                      
                                         </div>
-                                        <div class="w-32 absolute h-12 bg-blue-700 left-4 top-16 pt-4">
+                                        <div class="w-32 absolute h-12 bg-blue-700 left-4 top-16 pt-4 z-1">
                                                 <p class="text-gray-200 font-bold m-1 text-center"></p>
                                         </div>
                                     </li>  
@@ -2192,7 +2223,7 @@
                                 <ul class="m-2">
                                     <li>
                                         <p><strong>justify-self: start; justify-self: center;</strong></p>
-                                        <div class="bg-blue-600 grid grid-cols-[auto_auto_auto] p-1 overflow-x-scroll">
+                                        <div class="bg-blue-600 grid grid-cols-[auto_auto_auto] p-1 overflow-x-auto">
                                             <div class="bg-white m-1 p-1 text-center">order: 1</div>
                                             <div class="bg-white m-1 p-1 text-center">order: 2</div>
                                             <div class="bg-white m-1 p-1 text-center">order: 3</div>
@@ -2275,8 +2306,20 @@
             <!-- Zápatí (Nedodělané) -->
 
             <footer class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 sm:pt-0 max-sm:pt-0">
-                <div class="text-xl font-medium text-gray-700 h-64">
+                <div class="text-xl font-medium text-gray-700">
                     <p>© 2026 David Bartoš, Petr Bláha, Jakub Gutten, Vašek Hála</p>
+                    <br>
+                    <form action="mailto:bartos.da.2024@skola.ssps.cz" method="GET" class="mb-10">
+                        <fieldset>
+                            <legend>Našli jste chybu? Pošlete nám e-mail.</legend>
+                            <br>
+                            <label for="subj">Předmět:</label><br>
+                            <input class="m-1 p-1 font-mono rounded-lg bg-white shadow-lg w-64" type="text" id="subj" name="subject" value=""><br>
+                            <label for="zprava">Zpráva:</label><br>
+                            <textarea class="m-1 p-1 font-mono rounded-lg bg-white shadow-lg h-64 w-64" name="body" id="zprava"></textarea><br>
+                            <input class="m-1 p-2 font-mono rounded-lg bg-white shadow-lg hover:bg-gray-100" type="submit" value="Odeslat">
+                        </fieldset>
+                    </form>
                 </div>
             </footer>
         </div>
