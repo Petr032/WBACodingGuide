@@ -5,22 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Coding Guide</title>
 
-    <!-- Tailwind CDN (Dočasné) -->
+    <!-- CSS Link -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <!-- Inter -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />   
 
     <!-- Javaskript -->
 
     <script src="script.js"></script>
 </head>
 
-<body style="font-family: Inter, sans-serif" class="font-sans bg-gray-200">
+<body class="font-inter bg-gray-200">
 
     <button class="fixed xl:hidden sm:top-10 sm:left-10 max-sm:left-5 max-sm:top-5 z-100 will-change-transform">
         <div id="menu-btn" onclick="mobileMenuShow()" class="h-16 w-16 bg-gray-700 hover:bg-gray-600 hover:cursor-pointer">
@@ -45,7 +39,7 @@
                         <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
                     </div>
 
-                    <div class="h-[calc(100vh-108px)] text-gray-700 text-lg font-medium p-4 pl-5 overflow-y-auto">
+                    <div class="h-[calc(100vh-108px)] text-gray-700 text-lg font-medium p-4 pl-5 overflow-y-scroll">
                     <h4 class="text-xl text-red-600 font-semibold pb-2">Základy HTML</h4>
                     <a onclick="mobileMenuClose()" class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#html_01">&lt;html&gt;</a><br>
                     <a onclick="mobileMenuClose()" class="pl-3 pb-2 hover:cursor-pointer hover:text-gray-500" href="#html_02">&lt;head&gt;</a><br>
