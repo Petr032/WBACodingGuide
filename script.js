@@ -48,3 +48,13 @@ function mobileMenuShow()
 		menuOpen = false;
 	}
 }
+
+function mobileMenuClose()
+{
+	if (window.screen.width < 1280)
+	{
+		document.getElementById('menu-btn').classList.remove('hidden');
+		document.getElementById('aside-menu').classList.add('max-xl:hidden');
+		menuOpen = false;
+	}
+}
