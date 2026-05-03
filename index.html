@@ -7,7 +7,7 @@
 
     <!-- CSS Link -->
 
-    <link href="style.css" rel="stylesheet" />   
+    <link href="style.css" rel="stylesheet" />    
 
     <!-- Javaskript -->
 
@@ -16,7 +16,7 @@
 
 <body class="font-inter bg-gray-200">
 
-    <button class="fixed xl:hidden sm:top-10 sm:left-10 max-sm:left-5 max-sm:top-5 z-100 will-change-transform">
+    <button class="fixed xl:hidden sm:top-10 sm:left-10 max-sm:left-5 max-sm:top-5 z-100 will-change-transform" aria-label="Otevřít menu">
         <div id="menu-btn" onclick="mobileMenuShow()" class="h-16 w-16 bg-gray-700 hover:bg-gray-600 hover:cursor-pointer">
             <div class="p-3 grid grid-rows-5">
                 <div class="bg-gray-200 h-2"></div>
@@ -36,7 +36,7 @@
 
                     <div class="h-auto bg-red-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex relative">
                         <h3 class="p-3 pl-6 pr-6">Přehled</h3>
-                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
+                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer" aria-label="Zavřít menu">×</h3>
                     </div>
 
                     <div class="h-[calc(100vh-108px)] text-gray-700 text-lg font-medium p-4 pl-5 overflow-y-scroll">
@@ -96,7 +96,7 @@
 
                     <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex relative">
                         <h3 class="p-3 pl-6 pr-6">Přehled</h3>
-                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
+                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer" aria-label="Zavřít menu">×</h3>
                     </div>
 
                     <div class="h-[calc(100vh-108px)] text-gray-700 text-lg font-medium p-4 pl-5 overflow-y-scroll">
@@ -178,7 +178,7 @@
 
                     <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-3xl tracking-tight text-gray-100 flex relative">
                         <h3 class="p-3 pl-6 pr-6">Přehled</h3>
-                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer">×</h3>
+                        <h3 onclick="mobileMenuShow()" class="p-3 pr-6 right-0 absolute xl:hidden hover:cursor-pointer" aria-label="Zavřít menu">×</h3>
                     </div>
 
                     <div class="h-[calc(100vh-108px)] text-gray-700 text-lg font-medium p-4 pl-5 overflow-y-scroll">
@@ -218,7 +218,7 @@
     <!-- Header -->
     
     <header id="BackToTop" class="xl:ml-77.5 sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0">
-        <h1 class="pt-2 pb-2 max-xl:pt-26 underline tracking-tight text-gray-700 font-medium text-6xl">Návod pro tvorbu webových stránek</h1>
+        <h1 class="pt-2 pb-2 max-xl:pt-26 underline tracking-tight text-gray-700 font-medium md:text-6xl max-md:text-5xl">Návod pro tvorbu webových stránek</h1>
     </header>
 
     <!-- Hlavní část -->
@@ -230,13 +230,13 @@
 
             <section class="sm:p-10 max-sm:p-5 sm:pb-0 max-sm:pb-0 sm:pt-0 max-sm:pt-0  h-auto">               
                 <div class="flex flex-wrap max-sm:flex-col mt-10 tracking-tight text-gray-100 font-medium text-3xl">
-                    <button id="button-html" onclick="showSection('html')" class="tlac tlac-html shadow-lg bg-red-600 text-gray-100 rounded-lg hover:border-red-400 hover:text-red-400 hover:cursor-pointer">
+                    <button id="button-html" onclick="showSection('html')" class="tlac tlac-html shadow-lg bg-red-600 text-gray-100 rounded-lg hover:bg-gray-100 hover:cursor-pointer" aria-label="Přepnout na sekci HTML">
                         <h2 class="p-3 pr-6 pl-6">HTML</h2>
                     </button>
-                    <button id="button-css" onclick="showSection('css')" class="tlac tlac-css bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-blue-600 rounded-lg hover:border-blue-400 hover:text-blue-400 hover:cursor-pointer">
+                    <button id="button-css" onclick="showSection('css')" class="tlac tlac-css bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-blue-600 rounded-lg hover:bg-gray-100 hover:cursor-pointer" aria-label="Přepnout na sekci CSS">
                         <h2 class="p-3 pr-6 pl-6">CSS</h2>
                     </button>
-                    <button id="button-js" onclick="showSection('js')" class="tlac tlac-js bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-yellow-600 rounded-lg hover:border-yellow-400 hover:text-yellow-400 hover:cursor-pointer">
+                    <button id="button-js" onclick="showSection('js')" class="tlac tlac-js bg-white shadow-lg sm:ml-10 max-sm:mt-10 text-yellow-600 rounded-lg hover:bg-gray-100 hover:cursor-pointer" aria-label="Přepnout na sekci JS">
                         <h2 class="p-3 pr-6 pl-6">JS</h2>
                     </button>
                 </div>
@@ -287,7 +287,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -342,7 +342,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -397,7 +397,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -456,7 +456,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -514,7 +514,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -569,7 +569,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -624,7 +624,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -688,7 +688,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -741,7 +741,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -796,7 +796,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -852,7 +852,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -910,7 +910,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -962,7 +962,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1022,7 +1022,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1077,7 +1077,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1133,7 +1133,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1187,7 +1187,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1243,7 +1243,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1297,7 +1297,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1358,7 +1358,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1415,7 +1415,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1471,7 +1471,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1527,7 +1527,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1586,7 +1586,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1640,7 +1640,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1691,7 +1691,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1742,7 +1742,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1795,7 +1795,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1847,7 +1847,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -1927,7 +1927,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2017,7 +2017,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2071,7 +2071,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2126,7 +2126,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2178,7 +2178,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2234,7 +2234,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2301,7 +2301,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2352,7 +2352,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2405,7 +2405,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2457,7 +2457,7 @@
 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
                             <div
-                                class="h-auto bg-red-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                                class="h-auto bg-red-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
 
@@ -2515,7 +2515,7 @@
                             </ol>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -2577,7 +2577,7 @@
                             </ul>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -2616,7 +2616,7 @@
                             <p>Selektory je také možné seskupovat. Oddělujeme je čárkou.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -2688,7 +2688,7 @@
                             </div>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -2765,7 +2765,7 @@
                             <p>Barvy ohraničení jsou vysvětleny v sekci barvy.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -2812,7 +2812,7 @@
                             <p>Pro jednotlivé rohy lze také použít the <strong>border-top-left-radius, border-top-right-radius, border-bottom-right-radius a border-bottom-left-radius</strong></p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -2852,7 +2852,7 @@
                             </ul>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -2922,7 +2922,7 @@
                             </ul>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -2976,7 +2976,7 @@
                             <p>Dále lze u písem nastavit jejich velikost a také styl <strong>(normal,italic,...)</strong></p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3031,7 +3031,7 @@
                             </ul>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3081,7 +3081,7 @@
                             <p>Nebo pomocí čtyř hodnot. <strong>(top,right,bottom,left)</strong></p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3136,7 +3136,7 @@
                             <p>Prvky se statickou pozicí jsou umístěny dle normálního toku stránky.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3174,7 +3174,7 @@
                             <p>Nastavení vlastností top, right, bottom a left způsobí, že se prvek posune mimo svou normální polohu.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3210,7 +3210,7 @@
                             <p>Vlastnosti top, right, bottom a left se používají k nastavení konečné polohy elementu.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3243,7 +3243,7 @@
                             <p><strong>Pozor:</strong> Prvky s absolutní polohou se mohou překrývat s jinými prvky.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3290,7 +3290,7 @@
                             <p><strong>Pozor:</strong> Aby umístění fungovalo, musíte zadat alespoň jednu z vlastností top, right, bottom nebo left</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3332,7 +3332,7 @@
                             <p>Tyto vlastnosti fungují pouze na prvcích s position nastaveným na relative, absolute, fixed nebo sticky.</p>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3368,7 +3368,7 @@
                             <p><strong>Pozor:</strong> funguje pouze na pozicovaných prvcích a položkách flex boxu.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3451,7 +3451,7 @@
                             </ul>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3568,7 +3568,7 @@
                             </ul>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3677,7 +3677,7 @@
                             </ul>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3760,7 +3760,7 @@
                             </ul>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3834,7 +3834,7 @@
                             </ul>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -3970,7 +3970,7 @@
                             </ul>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4068,7 +4068,7 @@
                             </ul>  
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4154,7 +4154,7 @@
                             </ul>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4308,7 +4308,7 @@
                             </ul>                                         
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4389,7 +4389,7 @@
                             </ul>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4435,7 +4435,7 @@
                             <p>Vlastnost order lze použít k definování vizuálního pořadí položek gridu.</p>
                         </div> 
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-blue-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4489,7 +4489,7 @@
                             </ol>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4542,7 +4542,7 @@
                             </ol>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4592,7 +4592,7 @@
                             <p>Jednoduché komentáře značíme dvěmi lomítky (//) za kterými napíšeme svůj komentář - ten lze ale zapsat pouze na jeden řádek. Víceřádkové komentáře začínají lomítkem a hvězdičkou (/*) a končí hvězdičkou a lomítkem (*/), přičemž náš komentář vložíme mezi ně.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4636,7 +4636,7 @@
                             <p>Po klíčových slovech <em>let</em> nebo <em>const</em> následuje název proměnné jakýkoli si zvolíte, znaménko '=' a hodnotu kterou jí chcete přiřadit. Středníkem (;) vždy zakončujeme příkaz.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4676,7 +4676,7 @@
                             <p>Mezi závorky vždy vložíme název proměnné či jakoukoli jinou hodnotu kterou chceme vypsat.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4720,7 +4720,7 @@
                             <p>Po slovu <em>if</em> následuje v závorkách podmínka a v složených závorkách kód který se spustí pokud je podmínka platná. Pro více podmínek se používá (ale není povinný) příkaz <em>else if</em>, a potom <em>else</em> pokud žádná z podmínek nemá být pravdivá.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4762,7 +4762,7 @@
                             <p>Po definování těchto tří výrazů potom v složených závorkách následuje blok kódu který má for cyklus opakovat.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4798,7 +4798,7 @@
                             <p>Aby se funkce spustila, je potřeba ji potom "<strong>zavolat</strong>" jejím jménem a případně parametry.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4845,7 +4845,7 @@
                             <p>Arrow funkce na rozdíl od klasických funkcí automaticky ukládají výslednou hodnotu do proměnné. Za proměnnou následují (pokud nějaké) parametry a po šipce "=>" v složených závorkách už píšete váš kód.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4884,7 +4884,7 @@
                             </div>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4914,7 +4914,7 @@
                             <p>Pro získání hodnoty vlastnosti z objektu použijeme výraz ve formátu "názevObjektu.náz&#8203;evVlastnosti". Tomuto konceptu se také říká Objektově Orientované Programování (OOP).</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4950,7 +4950,7 @@
                             <p>Syntax je zde velmi jednoduchý: po příkazu document.querySel&#8203;ector následuje v závorkách a uvozovkách název HTML elementu který hledáme.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -4975,7 +4975,7 @@
                             <p>Po vybrání konkrétního HTML elementu změníte jeho text jednoduše přiřazením nové hodnoty.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -5000,7 +5000,7 @@
                             <p>Umožňuje <strong>měnit vlastnosti</strong> elementu přímo pomocí Javascriptu. Používá se pro dynamické změny vzhledu (např. po kliknutí).</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -5035,7 +5035,7 @@
                             </ol>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -5065,7 +5065,7 @@
                             <p>Po klíčových slovech <em>setTimeout</em> do závorek nejprve napíšete (nebo zavoláte) funkci která řekne co se má stát, oddělíte čárkou a napíšete za kolik <u>milisekund</u> se má událost spustit.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">
@@ -5092,7 +5092,7 @@
                             <p>Používá se pro časovače nebo opakované akce.</p>
                         </div>
                         <div class="m-4 rounded-lg shadow-lg col-span-2 self-start">
-                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-xl tracking-tight text-gray-100">
+                            <div class="h-auto bg-yellow-600 rounded-t-lg font-medium text-2xl tracking-tight text-gray-100">
                                 <h4 class="p-2 pl-6 pr-6">Ukázka Kódu</h4>
                             </div>
                             <div class="text-gray-700 text-xl font-medium m-4">

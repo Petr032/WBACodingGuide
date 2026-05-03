@@ -26,10 +26,12 @@ function showSection(name)
 	document.querySelectorAll('.tlac').forEach(sec => sec.classList.remove('bg-blue-600'));
 	document.querySelectorAll('.tlac').forEach(sec => sec.classList.remove('bg-yellow-600'));
 	document.querySelectorAll('.tlac').forEach(sec => sec.classList.add('bg-white'));
+	document.querySelectorAll('.tlac').forEach(sec => sec.classList.add('hover:bg-gray-100'));
 	document.querySelector('.tlac-html').classList.add('text-red-600');
 	document.querySelector('.tlac-css').classList.add('text-blue-600');
 	document.querySelector('.tlac-js').classList.add('text-yellow-600');
 	
+	document.querySelector('.tlac-' + name).classList.remove('hover:bg-gray-100');
 	document.querySelector('.tlac-' + name).classList.remove('bg-white');
 	document.querySelector('.tlac-' + name).classList.add('bg-' + colors.get(name) + '-600');
 	document.querySelector('.tlac-' + name).classList.remove('text-' + colors.get(name) + '-600');
