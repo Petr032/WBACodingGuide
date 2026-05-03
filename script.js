@@ -10,6 +10,9 @@ colors.set("js", "yellow");
 
 var menuOpen = false;
 
+window.addEventListener("load", handleHash);
+window.addEventListener("hashchange", handleHash);
+
 function showSection(name)
 {
 	document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
@@ -57,4 +60,25 @@ function mobileMenuClose()
 		document.getElementById('aside-menu').classList.add('max-xl:hidden');
 		menuOpen = false;
 	}
+}
+
+function handleHash() {
+  const hash = window.location.hash;
+
+  if (hash.startsWith("#css")) 
+  {
+    showSection("css");
+  } 
+  else if (hash.startsWith("#js")) 
+  {
+    showSection("js");
+  } 
+  else 
+  {
+    showSection("html");
+  }
+
+  setTimeout(() => {
+  document.querySelector(hash)?.scrollIntoView();
+  }, 50);
 }
