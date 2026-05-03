@@ -4,7 +4,7 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-inter: "Inter", sans-serif;
+    --font-inter: "Inter", sans-serif; 
     --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
